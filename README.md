@@ -21,14 +21,14 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 </script>
 ```
 
-<!-- ### Using directly from the UNPKG CDN
+### Using jsDelivr CDN
 
 ```html
 <script type="text/javascript"
-  src="https://unpkg.com/highlightjs-dafny/dist/dafny.min.js"></script>
+  src="https://cdn.jsdelivr.net/gh/ConsenSys/highlightjs-dafny/dist/dafny.min.js"></script>
 ```
 
-- More info: <https://unpkg.com>
+<!-- - More info: <https://unpkg.com>
 
 ### With Node or another build system
 
