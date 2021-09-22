@@ -1,0 +1,14 @@
+{
+  "name": "highlightjs-dafny",
+  "version": "1.0.0",
+  "description": "Highlight.js syntax grammar for the Dafny language",
+  "main": "src/dafny.js",
+  "devDependencies": {
+    "highlight.js": "^10.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roberto Saltini",
+  "license": "Apache-2.0"
+}
