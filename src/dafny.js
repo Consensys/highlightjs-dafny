@@ -199,7 +199,7 @@ export default function(hljs)     {
                     end: /\)/, 
                     keywords: KEYWORDS, 
                     relevance: 0,
-                    contains: [hljs.QUOTE_STRING_MODE, hljs.C_BLOCK_COMMENT_MODE, TYPE_FOR_IDENTIFIERS, OPERATORS]
+                    contains: [hljs.QUOTE_STRING_MODE, hljs.C_BLOCK_COMMENT_MODE, TYPE_FOR_IDENTIFIERS, OPERATORS, hljs.NUMBER_MODE]
                 }, 
                 hljs.C_LINE_COMMENT_MODE, 
                 hljs.C_BLOCK_COMMENT_MODE]
