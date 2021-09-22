@@ -1,3 +1,10 @@
+/*
+Language: Dafny
+Author: Roberto Saltini
+Description: Grammar definition for the Dafny language
+Website: https://github.com/dafny-lang/dafny
+*/   
+
 /**
  * Copyright 2021, ConsenSys Software Inc.
 
@@ -13,13 +20,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-
-/*
-Language: Dafny
-Author: Roberto Saltini
-Description: Grammar definition for the Dafny language
-Website: https://github.com/dafny-lang/dafny
-*/   
 
 export default function(hljs)     {
     const IDENT_WITH_BRACKETS = /[a-zA-Z_<>]*/
