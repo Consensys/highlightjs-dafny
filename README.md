@@ -46,7 +46,7 @@ hljs.initHighlightingOnLoad();
 
 ### React
 
-You need to import both Highlight.js and third-party language like Cypher:
+You need to import both Highlight.js and third-party language like Dafny:
 
 ```js
 import React, {Component} from 'react'
@@ -82,7 +82,7 @@ export default Highlighter;
 
 ## License
 
-Highlight.js is released under the CC0 1.0 License. See [LICENSE][1] file
+highlight-dafny is released under the Apache 2.0 license. See [LICENSE][1] file
 for details.
 
 ### Author
@@ -99,4 +99,4 @@ Roberto Saltini
 - The Highlight.js GitHub project: <https://github.com/highlightjs/highlight.js>
 - Dafny GitHub repo: <https://github.com/dafny-lang/dafny>
 
-[1]: https://github.com/highlightjs/highlightjs-cypher/blob/master/LICENSE
+[1]: https://github.com/ConsenSys/highlightjs-dafny/blob/main/LICENSE
