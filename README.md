@@ -27,8 +27,7 @@ This will find and highlight code inside of `<pre><code>` tags; it tries to dete
 ### Using jsDelivr CDN
 
 ```html
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/gh/ConsenSys/highlightjs-dafny/dist/dafny.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ConsenSys/highlightjs-dafny/dist/dafny.min.js"></script>
 ```
 
 <!-- - More info: <https://unpkg.com>
