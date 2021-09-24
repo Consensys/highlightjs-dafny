@@ -21,8 +21,8 @@ Website: https://github.com/dafny-lang/dafny
    limitations under the License.
  */
 
-export default function(hljs)     {
-    const IDENT_WITH_BRACKETS = /[a-zA-Z_<>]*/
+module.exports = function(hljs)     {
+    const IDENT_WITH_BRACKETS = /[a-zA-Z][a-zA-Z_<>0-9]*/
     
     const DAFNY_KEYWORDS = [    
         "abstract", 
@@ -50,6 +50,7 @@ export default function(hljs)     {
         "forall" , 
         "fresh" , 
         "function" , 
+        "for",
         "ghost" ,
         "if" , , 
         "import" ,  , 
@@ -124,12 +125,30 @@ export default function(hljs)     {
         literal: DAFNY_LITERALS
     };
     const TYPE_FOR_IDENTIFIERS = {
-                begin: new RegExp(
-                    /(?<=[^:]:[\s\n]*)/.source +
-                    IDENT_WITH_BRACKETS.source
-                ),
-                scope: 'type'
+                begin: [
+                    /(?<!:):/,
+                    /[\s\n]*/,
+                    IDENT_WITH_BRACKETS
+                ],
+                scope: {
+                    1: "operator",
+                    3: 'type'
+                },
+                relevance: 0
             };
+
+    const TYPE_FOR_TYPE_PARAMETERS = {
+        begin: [
+            /</,
+            IDENT_WITH_BRACKETS,
+            />/
+        ],
+        scope: {
+            2: 'type'
+        },
+        relevance: 0
+    };
+            
     
     const OPERATORS = {
         begin: /(?<!\w)/.source +
@@ -168,6 +187,7 @@ export default function(hljs)     {
         ")" + 
         /(?!\w)/.source ,
         scope: 'operator',
+        relevance: 0
 
     };
     return {
@@ -183,10 +203,11 @@ export default function(hljs)     {
                 {
                     contains: [
                     {
-                        scope: 'doctag', begin: '@\\w+'
+                        scope: 'doctag', begin: '@\\w+',
+                        relevance: 0
                     }
                     ]
-                }
+                },
             ),
             TYPE_FOR_IDENTIFIERS,
             OPERATORS,
@@ -195,13 +216,35 @@ export default function(hljs)     {
                 scope: "type"
             },
             {
-                begin: ["(?:" + hljs.IDENT_RE + "\\s+)", IDENT_WITH_BRACKETS, /\s*(?=\()/], 
+                begin: [
+                    /\b(class|module|trait)\b/,
+                    /\s*/,
+                    hljs.IDENT_RE
+                ],
+                scope: {
+                    1: "keyword",
+                    3: "title.class"
+                },
+                relevance: 0
+            },
+            {
+                begin: [
+                    "(?:" + hljs.IDENT_RE + "\\s+)", 
+                    hljs.IDENT_RE, 
+                    /\s*(?=\(|<)/], 
                 scope: {
                     2: "title.function"
                 }, 
                 keywords: KEYWORDS, 
-                contains: [{
-                    className: "params", 
+                contains: [
+                {
+                    begin: /</,
+                    end:  />/,
+                    scope: "type",
+                    relevance: 0
+                },
+                {
+                    scope: "params", 
                     begin: /\(/,
                     end: /\)/, 
                     keywords: KEYWORDS, 

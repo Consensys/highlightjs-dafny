@@ -3,12 +3,27 @@
   "version": "1.0.0",
   "description": "Highlight.js syntax grammar for the Dafny language",
   "main": "src/dafny.js",
+  "files": [
+    "src/dafny.js",
+    "dist/dafny.min.js"
+  ],
   "devDependencies": {
-    "highlight.js": "^10.4.1"
+    "highlight.js": "^11.0.0",
+    "mocha": "^7.1.1",
+    "should": "^13.2.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Roberto Saltini",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConsenSys/highlightjs-dafny"
+  },
+  "keywords": [
+    "dafny",
+    "highlight.js",
+    "highlightjs"
+  ]
 }

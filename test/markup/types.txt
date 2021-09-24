@@ -1,0 +1,8 @@
+function a(t: TYPE1, b: TYPE2):
+TYPE3
+
+function a(t: TYPE1, b: TYPE2):
+TYPE3<TYPE4>
+
+function a<TYPE1>(t: TYPE1, b: TYPE2):
+TYPE3<TYPE4>

@@ -1,0 +1,8 @@
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">a</span><span class="hljs-params">(t<span class="hljs-operator">:</span> <span class="hljs-type">TYPE1</span>, b<span class="hljs-operator">:</span> <span class="hljs-type">TYPE2</span>)</span><span class="hljs-operator">:</span>
+<span class="hljs-type">TYPE3</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">a</span><span class="hljs-params">(t<span class="hljs-operator">:</span> <span class="hljs-type">TYPE1</span>, b<span class="hljs-operator">:</span> <span class="hljs-type">TYPE2</span>)</span><span class="hljs-operator">:</span>
+<span class="hljs-type">TYPE3&lt;TYPE4&gt;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">a</span><span class="hljs-type">&lt;TYPE1&gt;</span><span class="hljs-params">(t<span class="hljs-operator">:</span> <span class="hljs-type">TYPE1</span>, b<span class="hljs-operator">:</span> <span class="hljs-type">TYPE2</span>)</span><span class="hljs-operator">:</span>
+<span class="hljs-type">TYPE3&lt;TYPE4&gt;</span>
