@@ -136,19 +136,6 @@ module.exports = function(hljs)     {
                 },
                 relevance: 0
             };
-
-    const TYPE_FOR_TYPE_PARAMETERS = {
-        begin: [
-            /</,
-            IDENT_WITH_BRACKETS,
-            />/
-        ],
-        scope: {
-            2: 'type'
-        },
-        relevance: 0
-    };
-            
     
     const OPERATORS = {
         begin: /(?<!\w)/.source +

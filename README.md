@@ -14,11 +14,14 @@ Simply load the module after loading Highlight.js. You'll use the minified versi
 
 ```html
 <script type="text/javascript" src="/path/to/highlight.min.js"></script>
-<script type="text/javascript" charset="UTF-8"
-  src="/path/to/highlightjs-dfny/dist/dafny.min.js"></script>
-<script type="text/javascript">
-  hljs.initHighlightingOnLoad();
-</script>
+<script type="text/javascript" src="/path/to/highlightjs-dfny/dist/dafny.min.js"></script>
+<script>hljs.highlightAll();</script>
+```
+
+This will find and highlight code inside of `<pre><code>` tags; it tries to detect the language automatically. If automatic detection doesn’t work for you, or you simply prefer to be explicit, you can specify the language manually in the using the class attribute:
+
+```html
+<pre><code class="language-dafny">...</code></pre>
 ```
 
 ### Using jsDelivr CDN
