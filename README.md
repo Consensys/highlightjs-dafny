@@ -44,41 +44,9 @@ hljs.registerLanguage("dafny", hljsDafny);
 hljs.initHighlightingOnLoad();
 ``` -->
 
-### React
+### Other usages
 
-You need to import both Highlight.js and third-party language like Dafny:
-
-```js
-import React, {Component} from 'react'
-import 'highlight.js/scss/darcula.scss' # your favourite theme
-import dafny from './dafny'
-import hljs from 'highlight.js'
-hljs.registerLanguage('dafny', dafny);
-
-class Highlighter extends Component
-{
-  constructor(props)
-  {
-    super(props);
-    hljs.initHighlightingOnLoad();
-  }
-
-  render()
-  {
-    let {children} = this.props;
-    return
-    {
-      <pre ref={(node) => this.node = node}>
-        <code className="dafny">
-          {children}
-        </code>
-      </pre>
-    }
-  }
-}
-
-export default Highlighter;
-```
+For other usages see the [official highlight.js documentation](https://highlightjs.org/usage/).
 
 ## License
 
